@@ -172,11 +172,11 @@ CREATE TABLE credentials (
 - **Memory safety** – Secure wipes, constant-time comparisons
 
 ### What it doesn't do
-- ❌ Browser integration (use your browser's password manager)
-- ❌ Cloud sync (export/import manually, or use encrypted USB sticks)
-- ❌ 2FA/TOTP generation (out of scope, use `oathtool`)
-- ❌ Graphical interface (CLI only, keep it simple)
-- ❌ Multi-user vaults (one vault per system user)
+- X Browser integration (use your browser's password manager)
+- X Cloud sync (export/import manually, or use encrypted USB sticks)
+- X 2FA/TOTP generation (out of scope, use `oathtool`)
+- X Graphical interface (CLI only, keep it simple)
+- X Multi-user vaults (one vault per system user)
 
 ### Command Reference
 
@@ -329,12 +329,12 @@ curl https://internal-api.corp/data
 ## Roadmap
 
 ### MVP (Current Focus)
-- ✅ ChaCha20-Poly1305 implementation (~300 LOC)
-- ✅ SQLite integration (encrypted blobs)
-- ✅ CLI commands: init, add, list, exec
-- ✅ Memory safety (secure_zero)
-- ⏳ SSH agent integration
-- ⏳ Proxy socket API
+-  ChaCha20-Poly1305 implementation (~300 LOC)
+-  SQLite integration (encrypted blobs)
+-  CLI commands: init, add, list, exec
+-  Memory safety (secure_zero)
+-  SSH agent integration
+-  Proxy socket API
 
 **Target:** Working end-to-end by February 2026
 
@@ -357,16 +357,16 @@ curl https://internal-api.corp/data
 ### Threat Model
 
 **Protected against:**
-- ✅ Database theft (encrypted with strong key derivation)
-- ✅ Memory dumps (credentials wiped after <100ms)
-- ✅ Timing attacks (constant-time comparisons)
-- ✅ Tampering (Poly1305 MAC catches modifications)
+-  Database theft (encrypted with strong key derivation)
+-  Memory dumps (credentials wiped after <100ms)
+-  Timing attacks (constant-time comparisons)
+-  Tampering (Poly1305 MAC catches modifications)
 
 **NOT protected against:**
-- ❌ Root-level malware (assumes trusted OS)
-- ❌ Unlocked vault on compromised system (user must lock vault when not in use)
-- ❌ Weak master passwords (enforcement planned, not yet implemented)
-- ❌ Physical attacks on running system (use full-disk encryption + lock timeouts)
+- X Root-level malware (assumes trusted OS)
+- X Unlocked vault on compromised system (user must lock vault when not in use)
+- X Weak master passwords (enforcement planned, not yet implemented)
+- X Physical attacks on running system (use full-disk encryption + lock timeouts)
 
 ### Why No Cloud Sync?
 
