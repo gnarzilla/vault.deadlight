@@ -466,12 +466,6 @@ Open to PRs for:
 - Test coverage
 - Platform support (BSD, etc.)
 
-**Not accepting:**
-- Feature creep (GUIs, cloud sync, etc.)
-- Additional crypto primitives (ChaCha20-Poly1305 is sufficient)
-- Third-party dependencies
-
-Keep it simple. Keep it auditable. Keep it working offline.
 
 ## License
 
@@ -486,4 +480,3 @@ ChaCha20-Poly1305 implementation is public domain (DJB's original code)
 
 ---
 
-**Built for the 80% of authentication that happens outside a browser.**
