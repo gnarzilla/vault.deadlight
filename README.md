@@ -4,7 +4,7 @@
 ![zero deps](https://img.shields.io/badge/deps-zero-success)
 ![300 LOC crypto](https://img.shields.io/badge/crypto-ChaCha20--Poly1305-blue)
 
-> **Stop typing passwords.** A local-first vault that auto-authenticates CLI tools and proxied requests when networks are hostile or nonexistent.
+> A local-first vault that auto-authenticates CLI tools and proxied requests when networks are hostile or nonexistent.
 
 [Why This Exists](#why-this-exists) · [Quick Start](#quick-start) · [How It Works](#how-it-works) · [Integration](#proxy-integration) · [Roadmap](#roadmap)
 
